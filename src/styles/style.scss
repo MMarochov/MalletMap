@@ -1,0 +1,37 @@
+@import "__colours.scss";
+@import "__fonts.scss";
+@import "__body.scss";
+@import "__headings.scss";
+@import "__components.scss";
+@import "__scrollbar.scss";
+@import "__breakpoints.scss";
+@import url(//fonts.googleapis.com/css?family=Material+Symbols+Outlined);
+
+:global(html),
+:global(body) {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  @include body;
+  @include light;
+}
+
+:global(*:focus) {
+  outline: none !important;
+  box-shadow: 0 0 0 0.2rem #fb0, 0 0 0 0.4rem #333 !important;
+}
+
+:global(a) {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+:global(a):hover,
+:global(button):hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

@@ -1,0 +1,54 @@
+// Primary
+$color-primary-charcoal: #333333;
+$color-primary-pink: #d40058;
+$color-primary-blue: #453c90;
+$color-primary-white: #ffffff;
+
+// Secondary
+$color-secondary-orange: #ff5f00;
+$color-secondary-pink: #e6007e;
+$color-secondary-blue: #22a7f0;
+$color-secondary-green: #028043;
+$color-secondary-purple: #6f1e82;
+$color-secondary-yellow: #ffc20e;
+
+// Neutrals
+$color-neutral-stone: #666666;
+$color-neutral-rock: #999999;
+$color-neutral-mist: #dddddd;
+$color-neutral-clouds: #f5f5f5;
+
+// Blues
+$color-blue-dark: #29286d;
+$color-blue-regular: #453c90;
+$color-blue-bright: #443ec1;
+$color-blue-medium: #a19ed9;
+$color-blue-light: #d0cdec;
+$color-blue-lightest: #e9ebf6;
+
+// Pinks
+$color-pink-dark: #930c3e;
+$color-pink-regular: #d40058;
+$color-pink-bright: #ff3366;
+$color-pink-medium: #ff8d9e;
+$color-pink-light: #ffcfd4;
+$color-pink-lightest: #fff2f5;
+
+// Mixins
+@mixin dark {
+  color: $color-primary-white;
+  background: $color-primary-blue;
+}
+
+@mixin light {
+  color: $color-primary-charcoal;
+  background: $color-primary-white;
+}
+
+.dark {
+  @include dark;
+}
+
+.light {
+  @include light;
+}

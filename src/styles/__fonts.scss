@@ -1,0 +1,13 @@
+@font-face {
+  font-family: OS Gill;
+  src: url("../fonts/OS Gill Regular.otf");
+}
+
+@font-face {
+  font-family: OS Gill Light;
+  font-weight: light;
+  src: url("../fonts/OS Gill Light.otf");
+}
+
+$os-gill-regular: "OS Gill Regular", sans-serif;
+$os-gill-light: "OS Gill Light", sans-serif;

@@ -1,0 +1,56 @@
+@import "__colours.scss";
+@import "__fonts.scss";
+
+.headline{
+    font-family: $os-gill-regular;
+    font-size: 3.052em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: normal;
+}
+
+.large-subheading{
+    font-family: $os-gill-regular;
+    font-size: 1.953em;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.lead-in-subheading{
+    font-family: $os-gill-regular;
+    font-size: 0.8em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: normal;
+}
+
+.subheading{
+    font-family: $os-gill-regular;
+    font-size: 1.25em;
+    line-height: 1;
+    font-weight: normal;
+}
+
+@mixin highlight{
+    padding: 0.25em 0.5em;
+    font-size: 1em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-weight: normal;
+    display: block;
+    width: fit-content;
+}
+
+.highlight{
+    @include highlight;
+    @include dark;
+}
+
+.highlight-dark{
+    @include highlight;
+    background: $color-primary-white;
+    color: $color-primary-blue;
+}

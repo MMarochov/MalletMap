@@ -1,0 +1,50 @@
+@import "__colours.scss";
+@import "__fonts.scss";
+
+@mixin peckline($width) {
+  border-left: $width solid $color-primary-pink;
+}
+
+@for $x from 5 through 15 {
+  .peckline-#{$x} {
+    @include peckline(0px + $x);
+  }
+}
+
+@mixin button {
+  @include body;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  min-width: 180px;
+}
+
+.button {
+  @include button;
+  background: $color-primary-blue;
+  border: 2px solid $color-primary-blue;
+  color: $color-primary-white;
+}
+
+.button-alt {
+  @include button;
+  background: $color-primary-white;
+  border: 2px solid $color-primary-blue;
+  color: $color-primary-blue;
+}
+
+.button-dark {
+  @include button;
+  background: transparent;
+  border: 2px solid $color-primary-white;
+  color: $color-primary-white;
+}
+
+.button-dark-alt {
+  @include button;
+  background: $color-primary-white;
+  border: 2px solid $color-primary-white;
+  color: $color-primary-blue;
+}

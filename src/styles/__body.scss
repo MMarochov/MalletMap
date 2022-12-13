@@ -1,0 +1,27 @@
+@import "__colours.scss";
+@import "__fonts.scss";
+
+@mixin body {
+  font-family: $os-gill-light;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.body {
+  @include body;
+}
+
+.caption {
+  font-family: $os-gill-regular;
+  font-size: 0.8em;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.intro-paragraph {
+  font-family: $os-gill-light;
+  font-size: 1.563em;
+  line-height: 1;
+  font-weight: normal;
+}
