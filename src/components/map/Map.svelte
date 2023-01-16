@@ -2,6 +2,7 @@
 <script lang="ts">
   // Imports
   import L from "leaflet";
+  import omnivore from "@mapbox/leaflet-omnivore";
   import { onMount, onDestroy, setContext } from "svelte";
   import ToggleButton from "./ToggleButton.svelte";
   import ToolButton from "../general/ToolButton.svelte";
@@ -12,7 +13,7 @@
   // Props
   export let map;
   export let apiKey: string;
-  export let map_style: OSBaseMap = "Outdoor_3857";
+  export let map_style: OSBaseMap = "Light_3857";
   export let center: [number, number] = [51.776, -1.379];
   export let zoom = 16;
   export let showToggle = true;
@@ -26,14 +27,26 @@
   let year = new Date().getFullYear();
   let attribution = `Contains OS data &copy Crown copyright and database rights ${year}`;
   let datahubEndpoint = `https://api.os.uk/maps/raster/v1/zxy/${map_style}/{z}/{x}/{y}.png?key=${apiKey}`;
-  let tileLayer = L.tileLayer(datahubEndpoint, {attribution: attribution });
+  let tileLayer = L.tileLayer(datahubEndpoint, { attribution: attribution });
   let layerControlVisible = false;
 
   // Render Map
   onMount(() => {
     map = L.map(container, options).setView(L.latLng(...center), zoom);
     tileLayer.addTo(map);
+    omnivore.geojson('./data/Processed/gpx_track_lines_processed_diss.geojson').addTo(map);
+
+    // Adding unprocessed gpx files to map:
+    // Single track:
+    // 
+    // Multiple tracks:
+    // for (let i = 0; i < listOfFilesPath.length; i += 1) {
+    //   omnivore.gpx(listOfFilesPath[i]).addTo(map);
+    // }
   });
+
+  // let geojson = L.geoJson(features).addTo(map);
+
 
   // Remove Map
   onDestroy(() => {
@@ -68,6 +81,9 @@
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""
   />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"
+  ></script>
 </svelte:head>
 
 <div bind:this={container} style="width: {width}; height: {height}">
@@ -93,8 +109,6 @@
 {/if}
 
 <style lang="scss">
-
-
   @import "../../styles/style.scss";
   #layer-toggle {
     z-index: 2000;
@@ -134,5 +148,4 @@
     width: 25px;
     height: 25px;
   }
-  
 </style>

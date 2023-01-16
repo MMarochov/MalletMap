@@ -3,42 +3,19 @@
 <script lang="ts">
   // Imports
   import Map from "./components/map/Map.svelte";
-  import GeoJsonLayer from "./components/map/GeoJsonLayer.svelte";
-  import Marker from "./components/map/Marker.svelte";
   import SidePanel from "./components/general/SidePanel.svelte";
-  import Card from "./components/general/Card.svelte";
-  import Popup from "./components/general/Popup.svelte";
   import License from "./components/general/License.svelte";
   import { licenseTermsAccepted } from "./stores/licenseStore";
   import {apiKey} from "./config";
 
   // Init
   let map;
-  // let features = [
-  //   {
-  //     type: "Feature",
-  //     properties: {},
-  //     geometry: {
-  //       type: "Polygon",
-  //       coordinates: [
-  //         [
-  //           [-1.381455659866333, 51.77699819490482],
-  //           [-1.3824212551116943, 51.776609859319194],
-  //           [-1.3824212551116943, 51.77543819409507],
-  //           [-1.3812518119812012, 51.775839816479575],
-  //           [-1.381455659866333, 51.77699819490482],
-  //         ],
-  //       ],
-  //     },
-  //   },
-  // ];
+
 </script>
 <License />
 <main class="dark {$licenseTermsAccepted ? '' : 'blurry'}">
   
   <Map {apiKey} bind:map>
-    <!-- <GeoJsonLayer name="GeoJSON" bind:features />
-    <Marker name="Marker" lat={51.776} lon={-1.379} /> -->
   </Map>
 
   <SidePanel>
