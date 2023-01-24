@@ -1,7 +1,7 @@
 <!-- Map.svelte -->
 <script lang="ts">
   // Imports
-  import L from "leaflet";
+  import L from "../Leaflet.Photo.js";
   import omnivore from "@mapbox/leaflet-omnivore";
   import { onMount, onDestroy, setContext } from "svelte";
   import ToggleButton from "./ToggleButton.svelte";
@@ -14,10 +14,10 @@
   export let map;
   export let apiKey: string;
   export let map_style: OSBaseMap = "Light_3857";
-  export let center: [number, number] = [51.776, -1.379];
-  export let zoom = 16;
+  export let center: [number, number] = [51.676, -2.279];
+  export let zoom = 8;
   export let showToggle = true;
-  export let options = { zoomControl: false };
+  export let options = { zoomControl: false, minZoom: 7 };
   export let height = "100%";
   export let width = "100%";
 
@@ -29,24 +29,70 @@
   let datahubEndpoint = `https://api.os.uk/maps/raster/v1/zxy/${map_style}/{z}/{x}/{y}.png?key=${apiKey}`;
   let tileLayer = L.tileLayer(datahubEndpoint, { attribution: attribution });
   let layerControlVisible = false;
+  let photos = [
+    {
+      lat: 51.50066871058191,
+      lng: -0.05953616174794717,
+      thumbnail:
+        "./data/Paintings/1. Tower Bridge from Bermondsey Angel Inn.jpg",
+      url: "./data/Paintings/1. Tower Bridge from Bermondsey Angel Inn.jpg",
+      name: "Tower Bridge and the City of London",
+      description:
+        "My last look back at the City of London in the Spring sunshine.",
+    },
+    {
+      lat: 51.39733171237847,
+      lng: 0.5040850096976737,
+      thumbnail: "./data/Paintings/3  Rochester along the Medway.jpg",
+      url: "./data/Paintings/3  Rochester along the Medway.jpg",
+      name: "Medway Magic",
+      description:
+        "The mighty Medway in the early evening light. This is a skyline that has barely changed in centuries. It’s still dominated by the cathedral and the castle.",
+    },
+    {
+      lat: 51.277863882260824,
+      lng: 1.1828876212767603,
+      thumbnail: "./data/Paintings/5a  Kent oasthouses at  Ickham.jpg",
+      url: "./data/Paintings/5a  Kent oasthouses at  Ickham.jpg",
+      name: "Quintessentially Kent",
+      description:
+        "These four oast houses are quintessentially Kent. They are opposite the wonderful ancient church in the village of Ickham.",
+    },
+    {
+      lat: 51.374929358508545,
+      lng: 1.445630037670987,
+      thumbnail: "./data/Paintings/5c North Foreland Lighthouse.jpg",
+      url: "./data/Paintings/5c North Foreland Lighthouse.jpg",
+      name: "North Foreland Lighthouse",
+      description:
+        "This is one of the stunning squat stone lighthouses built to protect shipping coming around the coast into the Dover Straits. I always knew I’d stop and sketch it. I didn’t expect it to be in such a bright blue spring sky.",
+    },
+    {
+      lat: 51.13003543233797,
+      lng: 1.332512374861635,
+      thumbnail: "./data/Paintings/6a Dover Castle.jpg",
+      url: "./data/Paintings/6a Dover Castle.jpg",
+      name: "Dover Castle ",
+      description:
+        "It’s hard to get a good view of Dover Castle from the west. This was my glimpse of the great structure from the top of Dame Vera Lynne way.",
+    },
+  ];
+  let photoLayer = L.photo.cluster().on("click", function (evt) {
+    let photo = evt.layer.photo;
+    let template =
+      '<img class="popup" src="{url}" /></a><h3>{name}</h3><p>{description}</p>';
+    evt.layer.bindPopup(L.Util.template(template, photo)).openPopup();
+  });
 
   // Render Map
   onMount(() => {
     map = L.map(container, options).setView(L.latLng(...center), zoom);
     tileLayer.addTo(map);
-    omnivore.geojson('./data/Processed/gpx_track_lines_processed_diss.geojson').addTo(map);
-
-    // Adding unprocessed gpx files to map:
-    // Single track:
-    // 
-    // Multiple tracks:
-    // for (let i = 0; i < listOfFilesPath.length; i += 1) {
-    //   omnivore.gpx(listOfFilesPath[i]).addTo(map);
-    // }
+    omnivore
+      .geojson("./data/Processed/gpx_track_lines_processed_diss.geojson")
+      .addTo(map);
+    photoLayer.add(photos).addTo(map);
   });
-
-  // let geojson = L.geoJson(features).addTo(map);
-
 
   // Remove Map
   onDestroy(() => {
@@ -86,7 +132,11 @@
   ></script>
 </svelte:head>
 
-<div bind:this={container} style="width: {width}; height: {height}">
+<div
+  bind:this={container}
+  id="map-container"
+  style="width: {width}; height: {height}"
+>
   {#if map}
     <slot />
   {/if}
@@ -110,6 +160,92 @@
 
 <style lang="scss">
   @import "../../styles/style.scss";
+
+  #map-container {
+    background: #d2d9da;
+  }
+
+  :global(.image-marker) {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    & :global(img) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  :global(.leaflet-div-icon) {
+    border-radius: 10px;
+    border: 4px solid $color-secondary-blue !important;
+    box-shadow: 0px 1px 30px 0px, #000 0px 1px 6px 0px;
+  }
+
+  :global(.popup) {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    & :global(img) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  :global(.leaflet-popup-content-wrapper) {
+    border-radius: 8px !important;
+  }
+
+  :global(.leaflet-popup-content) {
+    margin: 16px !important;
+    & :global(h3) {
+      margin: 15px 0 10px 0 !important;
+    }
+    & :global(p) {
+      margin: 0 0 6px 0 !important;
+    }
+    & :global(img) {
+      border-radius: 8px !important;
+    }
+  }
+  
+  :global(.cluster-marker) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-secondary-blue;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  :global(.leaflet-marker-photo) {
+    border-radius: 50%;
+    background: #79caf6;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0px 1px 30px 0px, #000 0px 1px 6px 0px;
+  }
+
+  :global(.leaflet-interactive) {
+    stroke: $color-secondary-pink;
+  }
+
   #layer-toggle {
     z-index: 2000;
     position: absolute;

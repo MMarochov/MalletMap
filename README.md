@@ -6,6 +6,9 @@ It was built using the OSSvelte branded webmap template (made by Josh Pooley in 
 
 ## Dev Notes
 
+### To do:
+- Remember to do a spellcheck
+
 To develop on localhost, run the following commands from the terminal:
 
 - `npm install` (installs dependencies listed in package.json; will need to run this every time a new dependency is added)
