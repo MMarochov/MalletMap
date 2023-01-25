@@ -8,6 +8,8 @@ It was built using the OSSvelte branded webmap template (made by Josh Pooley in 
 
 ### To do:
 - Remember to do a spellcheck
+- Lighter gpx
+- Hosting and domain name
 
 To develop on localhost, run the following commands from the terminal:
 

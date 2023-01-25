@@ -212,7 +212,7 @@
   :global(.leaflet-popup-content) {
     margin: 16px !important;
     & :global(h3) {
-      margin: 15px 0 10px 0 !important;
+      margin: 15px 0 6px 0 !important;
     }
     & :global(p) {
       margin: 0 0 6px 0 !important;
