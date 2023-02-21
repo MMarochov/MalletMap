@@ -52,7 +52,6 @@ L.photo = function (photos, options) {
 };
 
 if (MarkerClusterGroup) {
-  console.log("now");
   L.Photo.Cluster = MarkerClusterGroup.extend({
     options: {
       featureGroup: L.photo,

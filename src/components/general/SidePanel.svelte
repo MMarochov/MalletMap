@@ -58,6 +58,9 @@
     background: transparentize($color-primary-white, 0.05);
     box-shadow: $shadow;
     position: relative;
+    border-radius: 10px;
+    height: 96%;
+    margin: 14px 0 14px 14px;
   }
 
   .content {
