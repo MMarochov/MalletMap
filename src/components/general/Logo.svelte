@@ -19,3 +19,9 @@
 </script>
 
 <img src="./logos/{logo}.svg" {width} {height} alt="Ordnance Survey Logo" />
+
+<style>
+  img {
+    margin-bottom: 20px;
+  }
+</style>

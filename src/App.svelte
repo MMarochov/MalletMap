@@ -3,6 +3,7 @@
   // Imports
   import Map from "./components/map/Map.svelte";
   import SidePanel from "./components/general/SidePanel.svelte";
+  import Logo from "./components/general/Logo.svelte";
   import License from "./components/general/License.svelte";
   import { licenseTermsAccepted } from "./stores/licenseStore";
   import { apiKey } from "./config";
@@ -16,16 +17,26 @@
   <Map {apiKey} bind:map />
 
   <SidePanel>
+    <Logo logo="logo-colour" width={"150px"} />
+    <div id="title">
+      <h2
+        class="lead-in-subheading padded peckline-5 light {$licenseTermsAccepted
+          ? ''
+          : 'blurry'}"
+      >
+        Painting Utterly Brilliant Britain
+      </h2>
+      <h1 class="headline light {$licenseTermsAccepted ? '' : 'blurry'}">
+        Timmy Mallett's
+      </h1>
+      <h2 class="headline-2 light {$licenseTermsAccepted ? '' : 'blurry'}">
+        Cycling Circumnavigation of GB
+      </h2>
+    </div>
     <h2
       class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
     >
-      Painting Utterly Brilliant Britain
-    </h2>
-    <h1 class="headline light {$licenseTermsAccepted ? '' : 'blurry'}">
-      Timmy Mallett's
-    </h1>
-    <h2 class="headline-2 light {$licenseTermsAccepted ? '' : 'blurry'}">
-      Cycling Circumnavigation of GB
+      The origin story
     </h2>
     <p class="light {$licenseTermsAccepted ? '' : 'blurry'}">
       I’m curious about our country.
@@ -62,17 +73,38 @@
       I set off from Paddington Station down the Thames, and then headed
       clockwise around the coast, keeping the sea on my left...
     </p>
+    <h2
+      id="author"
+      class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
+    >
+      ~ Timmy Mallett
+    </h2>
   </SidePanel>
 </main>
 
 <style lang="scss">
   @import "./styles/style.scss";
-
   main {
     height: 100%;
     width: 100%;
   }
 
+  .padded {
+    padding: 8px;
+  }
+
+  #author {
+    text-align: right;
+    margin-top: 35px;
+  }
+
+  #title {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    margin: 15px 0px 15px 0px;
+  }
   :global(.headline-2) {
     font-size: 27px;
     font-family: "OS Gill Regular", sans-serif;
