@@ -53,7 +53,7 @@
     if (photo.type == "image") {
       template = `<img class="popup" src="${photo.url}" /></a><h3>${photo.name}</h3><p>${photo.description}</p>`;
     } else {
-      template = `<iframe width="450" height="315" src="https://www.youtube.com/embed/${photo.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      template = `<iframe width="450" height="325" src="https://www.youtube.com/embed/${photo.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
     }
     evt.layer.bindPopup(L.Util.template(template, photo)).openPopup();
   });
@@ -185,16 +185,14 @@
     }
   }
 
-  :global(.leaflet-popup-content-wrapper) {
-    border-radius: 8px !important;
-  }
-
   :global(.leaflet-popup-content) {
     width: 450px !important;
+    display: flex;
+    flex-direction: column;
   }
 
   :global(.leaflet-popup-content) {
-    margin: 16px !important;
+    margin: 14px !important;
     & :global(h3) {
       margin: 15px 0 6px 0 !important;
     }
@@ -202,6 +200,9 @@
       margin: 0 0 6px 0 !important;
     }
     & :global(img) {
+      border-radius: 8px !important;
+    }
+    & :global(iframe) {
       border-radius: 8px !important;
     }
   }
