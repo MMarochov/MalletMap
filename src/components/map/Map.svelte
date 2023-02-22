@@ -15,7 +15,7 @@
   export let map;
   export let apiKey: string;
   export let map_style: OSBaseMap = "Outdoor_3857";
-  export let center: [number, number] = [52.276, -6.479];
+  export let center: [number, number] = [53.276, -5.479];
   export let zoom = 7;
   export let showToggle = true;
   export let options = { zoomControl: false, minZoom: 7 };
@@ -31,7 +31,22 @@
   let tileLayer = L.tileLayer(datahubEndpoint, { attribution: attribution });
   let layerControlVisible = false;
 
-  // Innit: Media
+  // Init: box to cover France
+  let polyBounds = [
+    [51.05, 1.36],
+    [51.142, 2.58],
+    [49.07, 2.87],
+    [49.01, -2.51],
+    [49.9, -2.7],
+    [49.9, 0.5],
+  ];
+  var polygon = L.polygon(polyBounds, {
+    color: "#a9ddef",
+    fillOpacity: 1,
+    interactive: false,
+  });
+
+  // Init: Media
   let mediaLayer = L.photo.cluster().on("click", function (evt) {
     let photo = evt.layer.photo;
     let template;
@@ -56,6 +71,7 @@
   onMount(() => {
     map = L.map(container, options).setView(L.latLng(...center), zoom);
     tileLayer.addTo(map);
+    polygon.addTo(map);
     vtileLayer.addTo(map);
     mediaLayer.add(media).addTo(map);
   });
