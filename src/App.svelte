@@ -20,9 +20,11 @@
     <Logo logo="logo-colour" width={"150px"} />
     <div id="title">
       <h2
-        class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
+        class="lead-in-subheading padded peckline-5 light {$licenseTermsAccepted
+          ? ''
+          : 'blurry'}"
       >
-        Painting Utterly Brilliant Britain:
+        Painting Utterly Brilliant Britain
       </h2>
       <h1 class="headline light {$licenseTermsAccepted ? '' : 'blurry'}">
         Timmy Mallett's
@@ -31,7 +33,11 @@
         Cycling Circumnavigation of GB
       </h2>
     </div>
-
+    <h2
+      class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
+    >
+      The origin story
+    </h2>
     <p class="light {$licenseTermsAccepted ? '' : 'blurry'}">
       I’m curious about our country.
     </p>
@@ -68,8 +74,11 @@
       clockwise around the coast, keeping the sea on my left...
     </p>
     <h2
-        class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
-      >~ Timmy Mallett</h2>
+      id="author"
+      class="lead-in-subheading light {$licenseTermsAccepted ? '' : 'blurry'}"
+    >
+      ~ Timmy Mallett
+    </h2>
   </SidePanel>
 </main>
 
@@ -78,6 +87,15 @@
   main {
     height: 100%;
     width: 100%;
+  }
+
+  .padded {
+    padding: 8px;
+  }
+
+  #author {
+    text-align: right;
+    margin-top: 35px;
   }
 
   #title {

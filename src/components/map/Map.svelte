@@ -194,7 +194,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ff5f00c4;
+    background: $color-secondary-orange;
     height: 32px;
     width: 32px;
     border-radius: 50%;
@@ -204,7 +204,7 @@
 
   :global(.leaflet-marker-photo) {
     border-radius: 50%;
-    background: #fccab0;
+    background: #fab58f;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
