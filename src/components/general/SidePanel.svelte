@@ -59,12 +59,12 @@
     box-shadow: $shadow;
     position: relative;
     border-radius: 10px;
-    height: 96%;
+    height: 97%;
     margin: 14px 0 14px 14px;
   }
 
   .content {
-    padding: 50px 30px;
+    padding: 35px 30px;
     transition: width 0.8s ease;
     overflow-y: scroll;
     overflow-x: hidden;
