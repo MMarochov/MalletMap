@@ -7,8 +7,8 @@ export const media = [
   {
     lat: 51.50066871058191,
     lng: -0.05953616174794717,
-    thumbnail: "./data/Paintings/1. Tower Bridge from Bermondsey Angel Inn.jpg",
-    url: "./data/Paintings/1. Tower Bridge from Bermondsey Angel Inn.jpg",
+    thumbnail: "./data/output_ims/1. Tower Bridge from Bermondsey Angel Inn.jpg",
+    url: "./data/output_ims/1. Tower Bridge from Bermondsey Angel Inn.jpg",
     name: "Tower Bridge and the City of London",
     description:
       "My last look back at the City of London in the Spring sunshine.",
@@ -17,8 +17,8 @@ export const media = [
   {
     lat: 51.39733171237847,
     lng: 0.5040850096976737,
-    thumbnail: "./data/Paintings/3  Rochester along the Medway.jpg",
-    url: "./data/Paintings/3  Rochester along the Medway.jpg",
+    thumbnail: "./data/output_ims/3  Rochester along the Medway.jpg",
+    url: "./data/output_ims/3  Rochester along the Medway.jpg",
     name: "Medway Magic",
     description:
       "The mighty Medway in the early evening light. This is a skyline that has barely changed in centuries. It’s still dominated by the cathedral and the castle.",
@@ -27,8 +27,8 @@ export const media = [
   {
     lat: 51.277863882260824,
     lng: 1.1828876212767603,
-    thumbnail: "./data/Paintings/5a  Kent oasthouses at  Ickham.jpg",
-    url: "./data/Paintings/5a  Kent oasthouses at  Ickham.jpg",
+    thumbnail: "./data/output_ims/5a  Kent oasthouses at  Ickham.jpg",
+    url: "./data/output_ims/5a  Kent oasthouses at  Ickham.jpg",
     name: "Quintessentially Kent",
     description:
       "These four oast houses are quintessentially Kent. They are opposite the wonderful ancient church in the village of Ickham.",
@@ -37,8 +37,8 @@ export const media = [
   {
     lat: 51.374929358508545,
     lng: 1.445630037670987,
-    thumbnail: "./data/Paintings/5c North Foreland Lighthouse.jpg",
-    url: "./data/Paintings/5c North Foreland Lighthouse.jpg",
+    thumbnail: "./data/output_ims/5c North Foreland Lighthouse.jpg",
+    url: "./data/output_ims/5c North Foreland Lighthouse.jpg",
     name: "North Foreland Lighthouse",
     description:
       "This is one of the stunning squat stone lighthouses built to protect shipping coming around the coast into the Dover Straits. I always knew I’d stop and sketch it. I didn’t expect it to be in such a bright blue spring sky.",
@@ -47,8 +47,8 @@ export const media = [
   {
     lat: 51.13003543233797,
     lng: 1.332512374861635,
-    thumbnail: "./data/Paintings/6a Dover Castle.jpg",
-    url: "./data/Paintings/6a Dover Castle.jpg",
+    thumbnail: "./data/output_ims/6a Dover Castle.jpg",
+    url: "./data/output_ims/6a Dover Castle.jpg",
     name: "Dover Castle ",
     description:
       "It’s hard to get a good view of Dover Castle from the west. This was my glimpse of the great structure from the top of Dame Vera Lynne way.",

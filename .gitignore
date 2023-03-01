@@ -1,6 +1,5 @@
 /node_modules/
 /public/build/
 /src/config.ts
-public/data/Routes
 /package-lock.json
 .DS_Store
