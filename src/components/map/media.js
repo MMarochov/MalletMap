@@ -11,7 +11,17 @@ export const media = [
     url: "./data/output_ims/1. Tower Bridge from Bermondsey Angel Inn.jpg",
     name: "Tower Bridge and the City of London",
     description:
-      "My last look back at the City of London in the Spring sunshine.",
+      "Along the south bank at Bermondsey I stopped and took my last look back at the city of London in the Spring sunshine.",
+    type: "image",
+  },
+  {
+    lat: 51.445340926718856,
+    lng: 0.368609515830732  ,
+    thumbnail: "./data/output_ims/2 Tilbury on the  Thames from Gravesend ferry sketchbook.jpg",
+    url: "./data/output_ims/2 Tilbury on the  Thames from Gravesend ferry sketchbook.jpg",
+    name: "Old Father Thames",
+    description:
+      "I’m looking across at Tilbury from Gravesend ferry seeing the great ships coming and going. It reminds me we are an island. Near here Turner painted the Fighting Temeraire.",
     type: "image",
   },
   {
@@ -25,6 +35,26 @@ export const media = [
     type: "image",
   },
   {
+    lat: 51.3674901871065,
+    lng: 0.6407519205972764,
+    thumbnail: "./data/output_ims/4  Cycling through the garden of England sketchbook.jpg",
+    url: "./data/output_ims/4  Cycling through the garden of England sketchbook.jpg",
+    name: "Garden of England",
+    description:
+      "It’s the garden of England and I’m cycling off road through the great apple orchards of Kent. Of course, in March there aren’t too many apples on the trees!",
+    type: "image",
+  },
+  {
+    lat: 51.27151519806879,
+    lng: 1.2138015655557317,
+    thumbnail: "./data/output_ims/5 spring blossom from the Dog at Wingham sketchbook.jpg",
+    url: "./data/output_ims/5 spring blossom from the Dog at Wingham sketchbook.jpg",
+    name: "Cherry blossom at The Dog at Wingham",
+    description:
+      "I woke up in Room 5 at The Dog at Wingham hotel and painted the early morning light on the cherry blossom before breakfast.",
+    type: "image",
+  },
+  {
     lat: 51.277863882260824,
     lng: 1.1828876212767603,
     thumbnail: "./data/output_ims/5a  Kent oasthouses at  Ickham.jpg",
@@ -35,13 +65,33 @@ export const media = [
     type: "image",
   },
   {
+    lat: 51.36547416630915,
+    lng: 1.1945817004801296,
+    thumbnail: "./data/output_ims/5c Chislet windmill  sketchbook.jpg",
+    url: "./data/output_ims/5c Chislet windmill  sketchbook.jpg",
+    name: "Chislet Windmill",
+    description:
+      "This unusual windmill caught my eye as I cycled towards Reculver, and I added my pal Stevie pedalling past to give some scale",
+    type: "image",
+  },
+  {
     lat: 51.374929358508545,
     lng: 1.445630037670987,
     thumbnail: "./data/output_ims/5c North Foreland Lighthouse.jpg",
     url: "./data/output_ims/5c North Foreland Lighthouse.jpg",
     name: "North Foreland Lighthouse",
     description:
-      "This is one of the stunning squat stone lighthouses built to protect shipping coming around the coast into the Dover Straits. I always knew I’d stop and sketch it. I didn’t expect it to be in such a bright blue spring sky.",
+      "This is one of the stunning squat stone lighthouses built to protect shipping coming around the coast into the Dover Straits. A century ago, members of the East London group of painters came on the train to Broadstairs to sketch this view. I always knew I’d stop and sketch it. I didn’t expect it to be in such a bright blue sky on a spring day.",
+    type: "image",
+  },
+  {
+    lat: 51.35921217921711,
+    lng: 1.4452037435352305,
+    thumbnail: "./data/output_ims/6  Broadstairs beach  sketchbook.jpg",
+    url: "./data/output_ims/6  Broadstairs beach  sketchbook.jpg",
+    name: "Broadstairs Beach",
+    description:
+      "I sat here on the harbour wall enjoying fish and chips beneath Dickins Bleak House. It’s a gorgeous view of this lovely beach.",
     type: "image",
   },
   {
@@ -49,9 +99,109 @@ export const media = [
     lng: 1.332512374861635,
     thumbnail: "./data/output_ims/6a Dover Castle.jpg",
     url: "./data/output_ims/6a Dover Castle.jpg",
-    name: "Dover Castle ",
+    name: "Dover Castle",
     description:
-      "It’s hard to get a good view of Dover Castle from the west. This was my glimpse of the great structure from the top of Dame Vera Lynne way.",
+      "It’s hard to get a good view of the impressive Dover Castle from the west. This was my glimpse of the great structure from the top of Dame Vera Lynne way.",
+    type: "image",
+  },
+  {
+    lat: 51.05790665230656,
+    lng: 0.9544991408856376,
+    thumbnail: "./data/output_ims/6b Romney Marsh  watercolour.jpg",
+    url: "./data/output_ims/6b Romney Marsh  watercolour.jpg",
+    name: "Romney Marsh",
+    description:
+      "Weaving my way through Romney Marsh, I’m struck by the vastness of the skies. This secretive remote expanse on the border of Kent and Sussex has a history stretching back into the dark ages. Archbishop Becket got stuck here crossing the marsh. This watercolour conveys something of it’s mystery.",
+    type: "image",
+  },
+  {
+    lat: 50.851783760916916,
+    lng: 0.5624526115384703,
+    thumbnail: "./data/output_ims/7 Hastings beach  sketchbook.jpg",
+    url: "./data/output_ims/7 Hastings beach  sketchbook.jpg",
+    name: "Hastings Beach",
+    description:
+      "I love being right along the waterfront and this spot has so much to offer. Refreshment, railings, flags, deckchairs, sunlight, and hopefulness.",
+    type: "image",
+  },
+  {
+    lat: 50.83635640332406,
+    lng: 0.4633764180402558,
+    thumbnail: "./data/output_ims/8  Boats at Bexhill sketchbook.jpg",
+    url: "./data/output_ims/8  Boats at Bexhill sketchbook.jpg",
+    name: "Boats at Bexhill",
+    description:
+      "All along the south coast there are fishing boats drawn up on the shingle to remind us that the sea has always been integral to life here.",
+    type: "image",
+  },
+  {
+    lat: 50.76542237113935,
+    lng: 0.2905134113763362,
+    thumbnail: "./data/output_ims/9 Eastbourne pier.jpg",
+    url: "./data/output_ims/9 Eastbourne pier.jpg",
+    name: "Eastbourne Pier",
+    description:
+      "Nothing defines a British beach quite like a pier. Eastbourne Pier is one of the finest in East Sussex. It looks dramatic in both silhouette and full sun.",
+    type: "image",
+  },
+  {
+    lat: 50.73701291554296,
+    lng: 0.2425275287972158,
+    thumbnail: "./data/output_ims/10   Beachy Head watercolour.jpg",
+    url: "./data/output_ims/10   Beachy Head watercolour.jpg",
+    name: "Beachy Head",
+    description:
+      "Above the white cliffs the glimpse of the lighthouse way below makes me tread very carefully. These cliffs are immense.",
+    type: "image",
+  },
+  {
+    lat: 50.821470900536404,
+    lng: -0.1498546321722829,
+    thumbnail: "./data/output_ims/10a Brighton old Pier  watercolour.jpg",
+    url: "./data/output_ims/10a Brighton old Pier  watercolour.jpg",
+    name: "Brighton Old Pier",
+    description:
+      "The ruins of this ghostly pier are evocative of the golden age of English seaside holidays. I love the way the birds flock around the remains as if waiting for the entertainment to start.",
+    type: "image",
+  },
+  {
+    lat: 50.83317512577117,
+    lng: -0.2738716206090908,
+    thumbnail: "./data/output_ims/11  Shoreham church  sketchbook.jpg",
+    url: "./data/output_ims/11  Shoreham church  sketchbook.jpg",
+    name: "Shoreham Church",
+    description:
+      "The remains of the great abbey, founded by Bishop Odo in the early years after the Norman Conquest, it makes an impressive parish church in the white stone of Normandy.",
+    type: "image",
+  },
+  {
+    lat: 50.83655628881285,
+    lng: -0.7795002064478485,
+    thumbnail: "./data/output_ims/11a  Chichester Cathedral  acrylic.jpg",
+    url: "./data/output_ims/11a  Chichester Cathedral  acrylic.jpg",
+    name: "Shoreham Church",
+    description:
+      "Silhouetted in the late afternoon sunshine, Chichester Cathedral is a good place to stop for some reflection.",
+    type: "image",
+  },
+  {
+    lat: 50.8290957210144,
+    lng: -0.8524670206748325,
+    thumbnail: "./data/output_ims/12  Bosham sketchbook.jpg",
+    url: "./data/output_ims/12  Bosham sketchbook.jpg",
+    name: "Bosham Harbour",
+    description:
+      "There’s lots of history surrounding Bosham in Chichester harbour. It is associated with King Cnut and King Harold. I spent a few hours here when friends arrived to cheer me on.",
+    type: "image",
+  },
+  {
+    lat: 50.82701625926197,
+    lng: -0.8540018230847966,
+    thumbnail: "./data/output_ims/12 a Bosham watercolour.jpg",
+    url: "./data/output_ims/12 a Bosham watercolour.jpg",
+    name: "Bosham",
+    description:
+      "The long boardwalk across the marshes shows how far the tide changes. The light on the distant rooftops glisten in the sunshine.",
     type: "image",
   },
 

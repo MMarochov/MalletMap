@@ -1,5 +1,7 @@
 /node_modules/
 /public/build/
 /src/config.ts
+/public/data/input_ims
+/public/data/output_ims
 /package-lock.json
 .DS_Store
